@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Status {
+  OPENED
+  ON_THE_WAY
+  RESCUED
+  CLOSE
+}
+
+model Report {
+  Id          Int    @id @default(autoincrement())
+  Animal      String
+  City        String
+  Description String
+  Email       String @unique
+  Name        String
+  Phone       String
+  Picture     String
+  Road        String
+  Status      Status @default(OPENED)
+  Suburb      String
+
+  @@map("report")
+}
