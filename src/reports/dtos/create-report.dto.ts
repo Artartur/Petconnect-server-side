@@ -1,11 +1,11 @@
 export class CreateReportDto {
-  animal: string;
-  city: string;
-  description: string;
-  email: string;
-  name: string;
-  phone: string;
-  picture: string;
-  road: string;
-  suburb: string;
+  Animal: string;
+  City: string;
+  Description: string;
+  Email: string;
+  Name: string;
+  Phone: string;
+  Picture: string;
+  Road: string;
+  Suburb: string;
 }
